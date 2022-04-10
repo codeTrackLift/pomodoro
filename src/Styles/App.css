@@ -1,3 +1,18 @@
 *,*::after,*::before {
   box-sizing: border-box;
 }
+
+body {
+    text-shadow: 1px 1px black;
+    color: silver;
+    font-family: 'Roboto', sans-serif;
+}
+
+.pomodoro{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.message {
+    font-size: 2rem;
+}
