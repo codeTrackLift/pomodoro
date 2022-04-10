@@ -9,3 +9,4 @@ root.render(
     <App />
   </React.StrictMode>,
 );
+document.body.style = 'background: #282c34;'
