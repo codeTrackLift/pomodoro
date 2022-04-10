@@ -1,0 +1,51 @@
+footer {
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    background-color: #282c34;
+    color: white;
+}
+
+footer>a,
+footer>p {
+    margin: auto 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer>p>a>span {
+    font-style: italic;
+}
+
+footer>p>a {
+    text-decoration: none;
+}
+
+footer>p>a>img {
+    animation: slowSpin 5s ease-in-out infinite;
+}
+
+@keyframes slowSpin {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(-1, 1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.socialLogo {
+    max-height: 1.5rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.socialLogo:hover {
+    transform: scale(-1, 1) scale(1);
+}
