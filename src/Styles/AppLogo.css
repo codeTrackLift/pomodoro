@@ -6,21 +6,22 @@
 .App-logo {
     height: 40vmin;
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 1s ease-in-out;
+    animation: App-logo-spin infinite linear 5s;
     -webkit-filter: drop-shadow(1px 1px 1px black);
     filter: drop-shadow(1px 1px 1px black);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.App-logo.stop {
+    animation-play-state: paused;
+    opacity: 0.1;
 }
 
-.App-header {
+.App-body {
     min-height: 97vh;
     display: flex;
     flex-direction: column;
@@ -31,11 +32,17 @@
 }
 
 @keyframes App-logo-spin {
-    from {
+    0% {
         transform: rotate(0deg);
+        opacity: 0.25;
     }
 
-    to {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
         transform: rotate(360deg);
+        opacity: 0.25;
     }
 }
