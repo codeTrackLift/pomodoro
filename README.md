@@ -6,7 +6,7 @@
 <ol>
     <li>Languages: HTML, CSS, JavaScript</li>
     <li>Bootstrap, React 18</li>
-    <li>Stateful Components</li>
+    <li>React Hooks</li>
 </ol>
 
 ## About

@@ -17,6 +17,7 @@ function App() {
     const [timerOn, setTimerOn] = React.useState(false);
     const [onBreak, setOnBreak] = React.useState(false);
     const [breakAudio, setBreakAudio] = React.useState(new Audio(mySound));
+    const [testMode, setTestMode] = React.useState(true);
 
     const playBreakSound = () => {
         breakAudio.currentTime = 0;
@@ -51,9 +52,14 @@ function App() {
     };
 
     const controlTime = () => {
-        let second = 1000;
+        const second = () => {
+            if(testMode === true) {
+                return 10;
+            }
+            return 1000;
+        }
         let date = new Date().getTime();
-        let nextDate = new Date().getTime() + second;
+        let nextDate = new Date().getTime() + second();
         let onBreakVariable = onBreak;
         if(!timerOn) {
             let interval = setInterval(() => {
@@ -73,7 +79,7 @@ function App() {
                         }
                         return prev - 1;
                     });
-                    nextDate += second;
+                    nextDate += second();
                 }
             }, 30);
             localStorage.clear();
@@ -139,6 +145,14 @@ function App() {
                     onClick={resetTime}
                     >
                     &#10227;
+                </Button>
+                <Button
+                    id='testMode'
+                    variant='secondary'
+                    size='lg'
+                    onClick={() => setTestMode(!testMode)}
+                    >
+                    {testMode ? 'In Test Mode' : 'Toggle Test'}
                 </Button>
             </div>
         </main>

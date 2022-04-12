@@ -48,6 +48,10 @@ Button {
     padding-top: 0.25rem;
 }
 
+#testMode {
+    width: 10rem;
+}
+
 button:hover {
     background-color: transparent !important;
     border: 1px solid white !important; 
