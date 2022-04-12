@@ -136,7 +136,7 @@ function App() {
                     size='lg'
                     onClick={controlTime}
                     >
-                    {timerOn ? ' | | ' : <span>&#9658;</span>}
+                    {timerOn ? ' | | ' : <span>&#8680;</span>}
                 </Button>
                 <Button
                     id='reset'
