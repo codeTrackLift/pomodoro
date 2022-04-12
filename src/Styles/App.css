@@ -27,6 +27,34 @@ h3 {
 
 button {
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+    background-color: cornflowerblue !important;
+    border: 1px solid black !important;
+    font-weight: bolder;
+}
+
+Button {
+    width: 4rem;
+    height: 3rem;
+}
+
+.time-sets>Button {
+    font-size: 2rem !important;
+    padding: 0;
+}
+
+#reset {
+    font-size: 3rem !important;
+    line-height: 0.725;
+    padding-top: 0.25rem;
+}
+
+button:hover {
+    background-color: transparent !important;
+    border: 1px solid white !important; 
+}
+
+button:active {
+    background-color: lime !important;
 }
 
 .time-sets {

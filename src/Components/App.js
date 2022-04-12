@@ -4,6 +4,7 @@ import '../Styles/App.css';
 import logo from '../Media/logo.svg';
 import Footer from './Footer';
 import mySound from '../Media/timerDing.mp3';
+import Button from 'react-bootstrap/Button';
 
 function App() {
 
@@ -21,13 +22,6 @@ function App() {
         breakAudio.currentTime = 0;
         breakAudio.play();
     }
-
-    // const formatTime = (time) => {
-    //     let minutes = Math.floor(time / 60);
-    //     return (
-    //         minutes
-    //     );
-    // };
 
     const formatTime = (time) => {
         let minutes = Math.floor(time / 60);
@@ -106,7 +100,7 @@ function App() {
                 className={timerOn ? 'App-logo' : 'App-logo stop'}
             />
             <h1>Pomodoro Clock</h1>
-            <div id='buttonContainer'>
+            <div id='ButtonContainer'>
                 <Length 
                     id={'break'}
                     title={'break'} 
@@ -130,25 +124,22 @@ function App() {
             </div>
             <div className='timesets'>
 
-                <button 
+                <Button 
                     id='start_stop'
-                    className='btn-large green lighten-2'
+                    variant='secondary'
+                    size='lg'
                     onClick={controlTime}
                     >
-                    {timerOn ? (
-                        <i className='material-icons'>pause_circle_filled</i>
-                        ) : (        
-                        <i className='material-icons'>play_circle_filled</i>
-                    )}
-                </button>
-                <button
+                    {timerOn ? ' | | ' : <span>&#9658;</span>}
+                </Button>
+                <Button
                     id='reset'
-                    className='btn-large green lighten-2'
+                    variant='secondary'
+                    size='lg'
                     onClick={resetTime}
                     >
-                    <i className='material-icons'>autorenew</i>
-
-                </button>
+                    &#10227;
+                </Button>
             </div>
         </main>
         <Footer />
@@ -163,21 +154,21 @@ function Length({title, changeTime, type, time, formatTime, id}) {
             <div
                 id={`${id}-label`}
                 className='time-sets'>
-                <button 
+                <Button 
                     id={`${id}-decrement`}
-                    className='btn-small green lighten-2'
+                    variant='secondary' size='md'
                     onClick={() => changeTime(-60, type)}
                 >
-                    <i className='material-icons'>arrow_downward</i>
-                </button>
+                    &#8681;
+                </Button>
                 <h3 id={`${id}-length`}>{formatTime(time)}</h3>
-                <button 
+                <Button 
                     id={`${id}-increment`}
-                    className='btn-small green lighten-2'
+                    variant='secondary' size='md'
                     onClick={() => changeTime(60, type)}
                 >
-                    <i className='material-icons'>arrow_upward</i>
-                </button>
+                    &#8679;
+                </Button>
             </div>
         </div>
     );
