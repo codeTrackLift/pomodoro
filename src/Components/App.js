@@ -17,7 +17,7 @@ function App() {
     const [timerOn, setTimerOn] = React.useState(false);
     const [onBreak, setOnBreak] = React.useState(false);
     const [breakAudio, setBreakAudio] = React.useState(new Audio(mySound));
-    const [testMode, setTestMode] = React.useState(true);
+    const [testMode, setTestMode] = React.useState(false);
 
     const playBreakSound = () => {
         breakAudio.currentTime = 0;
