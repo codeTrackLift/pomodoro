@@ -12,7 +12,7 @@
 ## About
 This was developed during Bootcamp Week 9, our 'Intro to React' week.  There were some struggles due to the lesson materials being in React 17 as opposed to React 18.  
 
-To validated my understanding, I decided to make and deploy this React App.
+To help further my understanding, I followed a [tutorial](https://youtu.be/8khA0nJzh8A) to make and deploy this Pomodoro Clock React App.
 
 ## How to Run
 >Break & Session Time
