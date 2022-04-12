@@ -42,6 +42,11 @@ Button {
     padding: 0;
 }
 
+#start_stop {
+    font-size: 2rem !important;
+    padding-top: 0.005rem;
+}
+
 #reset {
     font-size: 3rem !important;
     line-height: 0.725;
