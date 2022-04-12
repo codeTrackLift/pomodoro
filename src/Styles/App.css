@@ -30,6 +30,11 @@ button {
     background-color: cornflowerblue !important;
     border: 1px solid black !important;
     font-weight: bolder;
+    transition: all 0.25s ease-in-out;
+}
+
+button.red {
+    background-color: red !important;
 }
 
 Button {
@@ -58,8 +63,8 @@ Button {
 }
 
 button:hover {
-    background-color: transparent !important;
-    border: 1px solid white !important; 
+    border: 0.125rem solid white !important; 
+    transform: scale(0.98);
 }
 
 button:active {

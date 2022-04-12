@@ -103,10 +103,10 @@ function App() {
             <img 
                 src={logo} 
                 alt="React.js animated logo" 
-                className={timerOn ? 'App-logo' : 'App-logo stop'}
+                className={!timerOn ? 'App-logo stop' : testMode ? 'App-logo testing' : 'App-logo'}
             />
             <h1>Pomodoro Clock</h1>
-            <div id='ButtonContainer'>
+            <div id='buttonContainer'>
                 <Length 
                     id={'break'}
                     title={'break'} 
@@ -135,6 +135,7 @@ function App() {
                     variant='secondary'
                     size='lg'
                     onClick={controlTime}
+                    className={timerOn ? 'red' : null}
                     >
                     {timerOn ? ' | | ' : <span>&#8680;</span>}
                 </Button>
@@ -150,7 +151,13 @@ function App() {
                     id='testMode'
                     variant='secondary'
                     size='lg'
-                    onClick={() => setTestMode(!testMode)}
+                    onClick={() => {
+                        if(timerOn === true) {
+                            controlTime();
+                        }
+                        setTestMode(!testMode);
+                    }}
+                    className={testMode ? 'red' : null}
                     >
                     {testMode ? 'In Test Mode' : 'Toggle Test'}
                 </Button>

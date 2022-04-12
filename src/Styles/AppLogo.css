@@ -14,11 +14,18 @@
     animation: App-logo-spin infinite linear 5s;
     -webkit-filter: drop-shadow(1px 1px 1px black);
     filter: drop-shadow(1px 1px 1px black);
+    
 }
 
 .App-logo.stop {
     animation-play-state: paused;
     opacity: 0.1;
+}
+
+.App-logo.testing {
+    animation: App-logo-spin infinite linear 1s;
+    -webkit-filter: drop-shadow(5px 5px 5px yellow);
+    filter: drop-shadow(5px 5px 5px yellow);
 }
 
 .App-body {
