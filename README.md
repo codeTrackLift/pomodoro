@@ -23,6 +23,10 @@ Adjust using up and down arrow buttons, default is 5 min Break & 25 min Session.
 
 These buttons operate as expected.
 
+>Test Mode
+
+Speeds up time!
+
 ## Future Roadmap
 This is a progression project, no further development is anticipated.
 
