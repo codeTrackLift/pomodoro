@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
-import '../Styles/Pomodoro.css';
+import '../styles/Pomodoro.css';
 
 export default function Pomodoro() {
     const [minutes, setMinutes] = useState(25);

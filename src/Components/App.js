@@ -1,9 +1,9 @@
 import React from 'react';
-import '../Styles/AppLogo.css';
-import '../Styles/App.css';
-import logo from '../Media/logo.svg';
+import '../styles/AppLogo.css';
+import '../styles/App.css';
+import logo from '../media/logo.svg';
 import Footer from './Footer';
-import mySound from '../Media/timerDing.mp3';
+import mySound from '../media/timerDing.mp3';
 import Button from 'react-bootstrap/Button';
 
 function App() {
